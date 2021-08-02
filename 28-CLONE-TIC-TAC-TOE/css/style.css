@@ -1,0 +1,141 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: monospace;
+  color: #76ffd8;
+  background-color: rgb(0, 36, 33);
+}
+.wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 0 auto;
+}
+.wrapper .left {
+  width: 40vw;
+}
+.wrapper .right {
+  width: 40vw;
+}
+h1 {
+  font-size: 3rem;
+}
+.restart {
+  margin-top: 30px;
+  width: 175px;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  border: 1px solid #14c894;
+  transition: all 0.2s ease;
+  font-size: 1rem;
+  font-weight: 900;
+  cursor: pointer;
+}
+.restart:hover {
+  background: #14c894;
+  color: rgb(0, 36, 33);
+  font-weight: 400;
+}
+.game {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  height: 500px;
+}
+.header {
+  display: flex;
+  color: #14c894;
+  font-size: 1.5rem;
+}
+.header .player-a {
+  flex: 1;
+  border-bottom: 5px solid rgb(0, 187, 125);
+  padding-bottom: 8px;
+}
+.header .player-b {
+  flex: 1;
+  border-bottom: 5px solid rgb(0, 116, 81);
+  padding-bottom: 8px;
+}
+.header:hover {
+  cursor: pointer;
+}
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-gap: 0px;
+  flex-grow: 1;
+  padding: 10px;
+  margin-top: 20px;
+}
+.board-tile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+}
+/* .board-tile:not(:nth-child(3n)) {
+  border-right: 3px solid rgba(137, 163, 189, 0);
+}
+.board-tile:not(:nth-child(-n + 3)) {
+  border-bottom: 3px solid rgba(137, 163, 189, 0);
+} */
+.board-tile:hover {
+  /* background-color: rgb(255, 126, 169); */
+  cursor: pointer;
+}
+
+.board .bd-right {
+  border-right: 2px solid #14c894;
+}
+.board .bd-bottom {
+  border-bottom: 2px solid #14c894;
+}
+
+/* media queries */
+
+@media (max-width: 700px) {
+  .wrapper {
+    width: 95vw;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .wrapper .left {
+    height: 35%;
+  }
+  .wrapper .right {
+    height: 85%;
+    width: 80%;
+  }
+  /* .game {
+    display: flex;
+    flex-direction: column;
+    height: 70vh;
+    width: 80vw;
+  } */
+  .title h1 {
+    font-size: 2rem;
+  }
+  .restart {
+    font-size: 1.1rem;
+    height: 2.5rem;
+    width: 12rem;
+    margin-top: 20px;
+    border: 2px solid #04ff79;
+    color: rgb(0, 255, 221);
+  }
+  .board {
+    margin-top: 0;
+  }
+}

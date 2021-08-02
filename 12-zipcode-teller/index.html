@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css"
+      integrity="sha512-IgmDkwzs96t4SrChW29No3NXBIBv8baW490zk5aXvhCD8vuZM3yUSkbyTBcXohkySecyzIrUwiF/qV0cuPcL3Q=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>ZipCode-App</title>
+    <style>
+      .icon-remove,
+      .icon-check {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero hero-body is-dark container">
+      <h1 class="title">Bangladesh location info</h1>
+      <h2 class="subtitle">Enter a zipcode to get the location info</h2>
+      <form id="zipForm">
+        <div class="field">
+          <div class="control has-icons-left has-icons-right">
+            <input
+              type="text"
+              placeholder="Enter zipcode"
+              class="input zip is-large"
+            />
+            <span class="icon is-small is-left">
+              <i class="fa fa-map-pin"></i>
+            </span>
+            <span class="icon is-small is-right icon-check">
+              <i class="fa fa-check"></i>
+            </span>
+            <span class="icon is-small is-right icon-remove">
+              <i class="fa fa-remove"></i>
+            </span>
+          </div>
+        </div>
+      </form>
+    </section>
+    <br />
+    <div class="container">
+      <div id="output"></div>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>

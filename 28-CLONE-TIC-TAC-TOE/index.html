@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- custom css -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Tic-Tac-Toe</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="left">
+        <div class="title">
+          <h1>
+            Let's Play <br />
+            Tic-Tac-Toe!
+          </h1>
+          <div class="restart">Start a new Game</div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="game">
+          <div class="header">
+            <div class="player-a">
+              <span> Player A</span>
+            </div>
+            <div class="player-b">
+              <span> Player B</span>
+            </div>
+          </div>
+          <!-- main game board -->
+          <div class="board">
+            <div class="board-tile bd-right bd-bottom" data-index="0">1</div>
+            <div class="board-tile bd-right bd-bottom" data-index="1">2</div>
+            <div class="board-tile bd-bottom" data-index="2">3</div>
+            <div class="board-tile bd-right bd-bottom" data-index="3">4</div>
+            <div class="board-tile bd-right bd-bottom" data-index="4">5</div>
+            <div class="board-tile bd-bottom" data-index="5">6</div>
+            <div class="board-tile bd-right" data-index="6">7</div>
+            <div class="board-tile bd-right" data-index="7">8</div>
+            <div class="board-tile" data-index="8">9</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- js -->
+    <script src="./js/main.js" type="module"></script>
+  </body>
+</html>

@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>4k Television ratings</title>
+
+    <style>
+      .stars-outer {
+        position: relative;
+        display: inline-block;
+      }
+      .stars-inner {
+        position: absolute;
+        top: 0;
+        left: 0;
+        white-space: nowrap;
+        overflow: hidden;
+        width: 0;
+      }
+      .stars-outer::before {
+        content: "\f005 \f005 \f005 \f005 \f005";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        color: #ccc;
+      }
+      .stars-inner::before {
+        content: "\f005 \f005 \f005 \f005 \f005";
+        font-family: "Font Awesome 5 Free";
+        font-weight: 900;
+        color: #f8ce0b;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container mt-5">
+      <div class="form-group">
+        <select id="product-select" class="form-control custom-select">
+          <option value="0" disabled selected>Select Product</option>
+          <option value="sony">Sony 4K TV</option>
+          <option value="samsung">Samsung 4K TV</option>
+          <option value="vizio">Vizio 4K TV</option>
+          <option value="panasonic">Panasonic 4K TV</option>
+          <option value="phillips">Phillips 4K TV</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <input
+          type="number"
+          id="rating-control"
+          class="form-control"
+          step="0.1"
+          max="5"
+          placeholder="Rate 1 - 5"
+          disabled
+        />
+      </div>
+
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>4K Television</th>
+            <th>Rating</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="sony">
+            <td>Sony 4K TV</td>
+            <td>
+              <div class="stars-outer">
+                <div class="stars-inner"></div>
+              </div>
+              <span class="number-rating"></span>
+            </td>
+          </tr>
+          <tr class="samsung">
+            <td>Samsung 4K TV</td>
+            <td>
+              <div class="stars-outer">
+                <div class="stars-inner"></div>
+              </div>
+              <span class="number-rating"></span>
+            </td>
+          </tr>
+          <tr class="vizio">
+            <td>Vizio 4K TV</td>
+            <td>
+              <div class="stars-outer">
+                <div class="stars-inner"></div>
+              </div>
+              <span class="number-rating"></span>
+            </td>
+          </tr>
+          <tr class="panasonic">
+            <td>Panasonic 4K TV</td>
+            <td>
+              <div class="stars-outer">
+                <div class="stars-inner"></div>
+              </div>
+              <span class="number-rating"></span>
+            </td>
+          </tr>
+          <tr class="phillips">
+            <td>Phillips 4K TV</td>
+            <td>
+              <div class="stars-outer">
+                <div class="stars-inner"></div>
+              </div>
+              <span class="number-rating"></span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
